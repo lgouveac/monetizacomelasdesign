@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sanctuary | Your Digital Garden</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-variant": "#d9dedb",
+              "tertiary-fixed": "#40bbff",
+              "on-secondary-fixed-variant": "#675200",
+              "on-surface-variant": "#595c5b",
+              "surface-container-high": "#e0e3e1",
+              "on-background": "#2c2f2e",
+              "secondary-container": "#fdd34d",
+              "error-dim": "#b92902",
+              "on-tertiary-container": "#00344d",
+              "outline": "#747776",
+              "primary-fixed-dim": "#5bf083",
+              "surface-container": "#e6e9e7",
+              "tertiary": "#00628c",
+              "on-error": "#ffefec",
+              "surface": "#f5f7f5",
+              "primary-container": "#6bff8f",
+              "secondary-fixed": "#fdd34d",
+              "surface-container-low": "#eff1ef",
+              "on-primary": "#ceffd0",
+              "surface-tint": "#006a2d",
+              "on-surface": "#2c2f2e",
+              "surface-dim": "#d1d5d3",
+              "on-tertiary-fixed": "#001a29",
+              "surface-container-highest": "#d9dedb",
+              "tertiary-dim": "#00557b",
+              "primary": "#006a2d",
+              "error-container": "#f95630",
+              "error": "#b02500",
+              "tertiary-container": "#40bbff",
+              "on-tertiary": "#e9f4ff",
+              "tertiary-fixed-dim": "#25adf1",
+              "secondary-fixed-dim": "#eec540",
+              "on-secondary-fixed": "#463600",
+              "surface-container-lowest": "#ffffff",
+              "primary-fixed": "#6bff8f",
+              "on-secondary-container": "#5c4900",
+              "inverse-primary": "#6bff8f",
+              "outline-variant": "#abaeac",
+              "surface-bright": "#f5f7f5",
+              "secondary": "#705900",
+              "on-primary-container": "#005f28",
+              "on-tertiary-fixed-variant": "#003d5a",
+              "inverse-surface": "#0b0f0e",
+              "on-error-container": "#520c00",
+              "on-secondary": "#fff2d4",
+              "secondary-dim": "#624d00",
+              "primary-dim": "#005d26",
+              "on-primary-fixed-variant": "#006a2d",
+              "background": "#f5f7f5",
+              "on-primary-fixed": "#004a1d",
+              "inverse-on-surface": "#9b9d9c"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: radial-gradient(circle at top right, #e6ffed 0%, #f5f7f5 100%);
+            min-height: 100vh;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .ambient-pulse {
+            position: fixed;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: #40bbff;
+            filter: blur(120px);
+            opacity: 0.15;
+            z-index: -1;
+            top: -200px;
+            right: -100px;
+        }
+        .ambient-pulse-2 {
+            position: fixed;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: #6bff8f;
+            filter: blur(100px);
+            opacity: 0.1;
+            z-index: -1;
+            bottom: -100px;
+            left: -50px;
+        }
+    </style>
+</head>
+<body class="text-on-background selection:bg-primary-container selection:text-on-primary-container">
+<div class="ambient-pulse"></div>
+<div class="ambient-pulse-2"></div>
+<div class="flex min-h-screen">
+<!-- SideNavBar (Authority: JSON) -->
+<aside class="hidden md:flex flex-col h-screen w-64 rounded-r-[3rem] bg-emerald-50 sticky top-0 z-40 p-6 gap-8 overflow-y-auto no-border tonal-shift-bg-emerald-100">
+<div class="flex items-center gap-3 px-2">
+<div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">spa</span>
+</div>
+<div>
+<h1 class="text-xl font-black text-emerald-900 tracking-tight">The Sanctuary</h1>
+<p class="text-[10px] uppercase tracking-widest font-bold text-primary">Your Digital Garden</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2">
+<!-- Active Item: Dashboard -->
+<a class="flex items-center gap-3 bg-emerald-200/50 text-emerald-900 rounded-full px-4 py-3 font-semibold active:translate-x-1 duration-300 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-plus-jakarta-sans leading-relaxed">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 text-emerald-800/70 px-4 py-3 hover:bg-emerald-100 rounded-full transition-all active:translate-x-1 duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="self_improvement">self_improvement</span>
+<span class="font-plus-jakarta-sans leading-relaxed">Meditation</span>
+</a>
+<a class="flex items-center gap-3 text-emerald-800/70 px-4 py-3 hover:bg-emerald-100 rounded-full transition-all active:translate-x-1 duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="bedtime">bedtime</span>
+<span class="font-plus-jakarta-sans leading-relaxed">Sleep</span>
+</a>
+<a class="flex items-center gap-3 text-emerald-800/70 px-4 py-3 hover:bg-emerald-100 rounded-full transition-all active:translate-x-1 duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="edit_note">edit_note</span>
+<span class="font-plus-jakarta-sans leading-relaxed">Journaling</span>
+</a>
+</nav>
+<div class="mt-4">
+<button class="w-full bg-primary text-on-primary rounded-full py-4 font-bold headline-sm shadow-lg shadow-primary/20 flex items-center justify-center gap-2 hover:opacity-90 transition-opacity">
+<span>Start Session</span>
+<span class="material-symbols-outlined text-sm">play_arrow</span>
+</button>
+</div>
+<div class="mt-auto flex flex-col gap-2 border-t border-emerald-100 pt-6">
+<a class="flex items-center gap-3 text-emerald-800/70 px-4 py-2 hover:bg-emerald-100 rounded-full transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span class="font-plus-jakarta-sans leading-relaxed text-sm">Support</span>
+</a>
+<a class="flex items-center gap-3 text-emerald-800/70 px-4 py-2 hover:bg-emerald-100 rounded-full transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-plus-jakarta-sans leading-relaxed text-sm">Account</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 flex flex-col">
+<!-- TopAppBar (Authority: JSON) -->
+<header class="w-full sticky top-0 z-50 bg-emerald-50/80 backdrop-blur-xl shadow-sm shadow-emerald-900/5">
+<div class="flex justify-between items-center px-6 py-4 w-full max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-bold tracking-tight text-emerald-900">Sanctuary</span>
+<div class="hidden lg:flex items-center gap-6">
+<a class="font-plus-jakarta-sans text-sm font-bold border-b-2 border-emerald-600 text-emerald-900 active:scale-95 duration-200" href="#">Overview</a>
+<a class="font-plus-jakarta-sans text-sm font-medium text-emerald-800/60 hover:text-emerald-700 transition-colors active:scale-95 duration-200" href="#">Community</a>
+<a class="font-plus-jakarta-sans text-sm font-medium text-emerald-800/60 hover:text-emerald-700 transition-colors active:scale-95 duration-200" href="#">Library</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<input class="bg-surface-container-low border-none rounded-full px-6 py-2 text-sm w-64 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all" placeholder="Search peace..." type="text"/>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span>
+</div>
+<button class="w-10 h-10 flex items-center justify-center text-emerald-800/60 hover:text-emerald-900 transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center text-emerald-800/60 hover:text-emerald-900 transition-colors">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary/20">
+<img alt="User profile avatar" class="w-full h-full object-cover" data-alt="Portrait of a smiling young man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxIk1VdVuSFIF5c-plopiT7GzeBYgfRD34MlqXX3zSxZ9YIl4A_9pPxVd2ux3BU8UYE4wrjsVfWRQJpIffYUchumfjPv3UOSWfBpGalsxXSCzGa08gqsHrlFjKuP3tKwHj5PC3e7kcHkfvGihhjxDB849Mxvb28eAsHiOyzTGA35emAb4FTcpOe-JASeOBx8eM3BlsS8NmcIUcLlkkpdk_GYONFej5zI6OHV_dj0In7OfCxRY9OtjE192cPtf_Hd6ZXGAP-5nDHRU"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Dashboard Content -->
+<div class="p-6 md:p-12 max-w-7xl mx-auto w-full space-y-12">
+<!-- Greeting & Current Status -->
+<section class="flex flex-col md:flex-row justify-between items-end gap-8">
+<div class="space-y-2">
+<h2 class="text-display-lg text-5xl font-extrabold tracking-tight text-on-background">Good morning, Lucas</h2>
+<p class="text-body-lg text-on-surface-variant max-w-md">Your garden is thriving today. You've completed 3 days of your mindfulness streak.</p>
+</div>
+<div class="glass-card p-6 rounded-xl flex items-center gap-6 shadow-sm">
+<div class="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">wb_sunny</span>
+</div>
+<div>
+<p class="text-label-md font-bold text-secondary uppercase tracking-wider">Current Vibe</p>
+<h3 class="text-headline-lg text-2xl font-bold">Luminous</h3>
+</div>
+</div>
+</section>
+<!-- Main Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Active Cycles (Authority: Progress) -->
+<div class="md:col-span-8 space-y-6">
+<div class="bg-surface-container-low rounded-xl p-8 space-y-8">
+<div class="flex justify-between items-center">
+<h3 class="text-2xl font-bold tracking-tight">Active Cycles</h3>
+<button class="text-primary font-bold text-sm flex items-center gap-1 hover:underline">
+                                    View all <span class="material-symbols-outlined text-xs">arrow_forward</span>
+</button>
+</div>
+<div class="space-y-8">
+<!-- Cycle 1 -->
+<div class="space-y-3">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">psychology</span>
+</div>
+<span class="font-bold text-on-surface">Deep Focus Flow</span>
+</div>
+<span class="text-sm font-bold text-primary">75%</span>
+</div>
+<div class="h-3 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 75%"></div>
+</div>
+</div>
+<!-- Cycle 2 -->
+<div class="space-y-3">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-tertiary-container flex items-center justify-center text-on-tertiary-container">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+</div>
+<span class="font-bold text-on-surface">Hydration Ritual</span>
+</div>
+<span class="text-sm font-bold text-tertiary">40%</span>
+</div>
+<div class="h-3 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-tertiary rounded-full" style="width: 40%"></div>
+</div>
+</div>
+<!-- Cycle 3 -->
+<div class="space-y-3">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">park</span>
+</div>
+<span class="font-bold text-on-surface">Nature Connection</span>
+</div>
+<span class="text-sm font-bold text-secondary">90%</span>
+</div>
+<div class="h-3 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 90%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Active Palette -->
+<div class="bg-surface-container-lowest rounded-xl p-8 space-y-6">
+<h3 class="text-2xl font-bold tracking-tight">Active Palette</h3>
+<p class="text-on-surface-variant text-sm">Your visual environment is tuned to these serene tones for better focus.</p>
+<div class="flex flex-wrap gap-4">
+<div class="group relative">
+<div class="w-20 h-28 bg-primary-container rounded-lg shadow-sm hover:scale-105 transition-transform cursor-pointer"></div>
+<span class="text-[10px] font-bold mt-2 block text-center opacity-60">Sage Mist</span>
+</div>
+<div class="group relative">
+<div class="w-20 h-28 bg-tertiary-container rounded-lg shadow-sm hover:scale-105 transition-transform cursor-pointer"></div>
+<span class="text-[10px] font-bold mt-2 block text-center opacity-60">Sky Echo</span>
+</div>
+<div class="group relative">
+<div class="w-20 h-28 bg-secondary-container rounded-lg shadow-sm hover:scale-105 transition-transform cursor-pointer"></div>
+<span class="text-[10px] font-bold mt-2 block text-center opacity-60">Sun Silk</span>
+</div>
+<div class="group relative">
+<div class="w-20 h-28 bg-surface-variant rounded-lg shadow-sm hover:scale-105 transition-transform cursor-pointer"></div>
+<span class="text-[10px] font-bold mt-2 block text-center opacity-60">Soft Stone</span>
+</div>
+<div class="w-20 h-28 border-2 border-dashed border-outline-variant rounded-lg flex flex-col items-center justify-center text-outline-variant hover:border-primary hover:text-primary transition-colors cursor-pointer">
+<span class="material-symbols-outlined">add</span>
+<span class="text-[10px] font-bold">Edit</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Secondary Bento Cards -->
+<div class="md:col-span-4 space-y-6">
+<!-- Card: Daily Quote -->
+<div class="bg-primary text-on-primary p-8 rounded-xl relative overflow-hidden h-64 flex flex-col justify-between">
+<span class="material-symbols-outlined text-6xl opacity-20 absolute -top-2 -left-2">format_quote</span>
+<p class="text-xl font-medium leading-relaxed z-10">"The garden of the mind requires no water, only attention."</p>
+<div class="z-10">
+<p class="font-bold">— Marcus Aurelius</p>
+<p class="text-xs opacity-70">Daily Insight</p>
+</div>
+</div>
+<!-- Card: Quick Stats -->
+<div class="bg-surface-container-high p-8 rounded-xl space-y-6">
+<h4 class="font-bold text-lg">Weekly Bloom</h4>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-lowest p-4 rounded-lg text-center">
+<p class="text-2xl font-black text-primary">12</p>
+<p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Sessions</p>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-lg text-center">
+<p class="text-2xl font-black text-tertiary">4.2</p>
+<p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Hours</p>
+</div>
+</div>
+<!-- Small organic image for flavor -->
+<div class="h-32 rounded-lg overflow-hidden bg-emerald-100">
+<img alt="Small succulent plant in a ceramic pot" class="w-full h-full object-cover mix-blend-multiply opacity-60" data-alt="Close up of a green succulent plant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq-Q6a8ZuPLlZ6350XMwsPZh6tWlVkESM9_aiE8it-GagbJ6BnB9wRHh5sC5T088Erww7E48jO6xP-1XGhuYROHFgifPh8UOp3PgiLUdhcFG-CqmraYKkd1EWreeYcOh6mF7XbWMVe-XcBpG3yvSNPRtNfi3Wlwd9LjkiU0RHqk6ITO-61O_ii-oFA6IfMA9sN-qEErGMQBApAkzHi1gUzQF2XalnTQcEShnt8W9EyYu2C45m1oJ1kY8QRLFERhZiqTuIMGsfjiEA"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer-style Recommendation Section -->
+<section class="space-y-6 pb-20">
+<h3 class="text-2xl font-bold tracking-tight px-2">Ready to grow?</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="group bg-surface-container-lowest hover:bg-primary-container transition-colors rounded-xl p-6 cursor-pointer">
+<div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-on-primary mb-4">
+<span class="material-symbols-outlined">self_improvement</span>
+</div>
+<h4 class="font-bold mb-1">Morning Calm</h4>
+<p class="text-sm text-on-surface-variant group-hover:text-on-primary-container">10 min meditation to start your day.</p>
+</div>
+<div class="group bg-surface-container-lowest hover:bg-tertiary-container transition-colors rounded-xl p-6 cursor-pointer">
+<div class="w-12 h-12 bg-tertiary rounded-full flex items-center justify-center text-on-tertiary mb-4">
+<span class="material-symbols-outlined">nightlight</span>
+</div>
+<h4 class="font-bold mb-1">Sleep Deep</h4>
+<p class="text-sm text-on-surface-variant group-hover:text-on-tertiary-container">Guided drift into peaceful slumber.</p>
+</div>
+<div class="group bg-surface-container-lowest hover:bg-secondary-container transition-colors rounded-xl p-6 cursor-pointer">
+<div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-on-secondary mb-4">
+<span class="material-symbols-outlined">bolt</span>
+</div>
+<h4 class="font-bold mb-1">Power Flow</h4>
+<p class="text-sm text-on-surface-variant group-hover:text-on-secondary-container">Quick 5-min energy booster.</p>
+</div>
+<div class="group bg-surface-container-lowest hover:bg-surface-variant transition-colors rounded-xl p-6 cursor-pointer">
+<div class="w-12 h-12 bg-on-surface-variant rounded-full flex items-center justify-center text-surface mb-4">
+<span class="material-symbols-outlined">menu_book</span>
+</div>
+<h4 class="font-bold mb-1">Journal Prep</h4>
+<p class="text-sm text-on-surface-variant group-hover:text-on-surface">Reflect on your achievements.</p>
+</div>
+</div>
+</section>
+</div>
+</main>
+</div>
+<!-- Mobile Bottom Navigation (Authority: Logic Filter) -->
+<div class="md:hidden fixed bottom-0 left-0 right-0 bg-emerald-50/90 backdrop-blur-md px-6 py-4 flex justify-between items-center z-50">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="text-[10px] font-bold">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-emerald-800/60" href="#">
+<span class="material-symbols-outlined">self_improvement</span>
+<span class="text-[10px] font-bold">Meditate</span>
+</a>
+<div class="-mt-12 bg-primary w-14 h-14 rounded-full flex items-center justify-center text-on-primary shadow-lg border-4 border-background">
+<span class="material-symbols-outlined text-3xl">add</span>
+</div>
+<a class="flex flex-col items-center gap-1 text-emerald-800/60" href="#">
+<span class="material-symbols-outlined">bedtime</span>
+<span class="text-[10px] font-bold">Sleep</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-emerald-800/60" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold">Profile</span>
+</a>
+</div>
+</body></html>

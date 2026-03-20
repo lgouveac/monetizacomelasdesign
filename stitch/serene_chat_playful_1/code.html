@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Digital Sanctuary - Serene Guide</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "error-container": "#f95630",
+              "error": "#b02500",
+              "primary": "#006a2d",
+              "tertiary-dim": "#00557b",
+              "tertiary-container": "#40bbff",
+              "on-tertiary": "#e9f4ff",
+              "secondary-fixed-dim": "#eec540",
+              "tertiary-fixed-dim": "#25adf1",
+              "on-secondary-container": "#5c4900",
+              "primary-fixed": "#6bff8f",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed": "#463600",
+              "inverse-primary": "#6bff8f",
+              "outline-variant": "#abaeac",
+              "surface-bright": "#f5f7f5",
+              "on-primary-container": "#005f28",
+              "secondary": "#705900",
+              "on-tertiary-fixed-variant": "#003d5a",
+              "on-error-container": "#520c00",
+              "inverse-surface": "#0b0f0e",
+              "secondary-dim": "#624d00",
+              "primary-dim": "#005d26",
+              "on-secondary": "#fff2d4",
+              "on-primary-fixed-variant": "#006a2d",
+              "inverse-on-surface": "#9b9d9c",
+              "on-primary-fixed": "#004a1d",
+              "background": "#f5f7f5",
+              "surface-variant": "#d9dedb",
+              "tertiary-fixed": "#40bbff",
+              "surface-container-high": "#e0e3e1",
+              "on-surface-variant": "#595c5b",
+              "on-secondary-fixed-variant": "#675200",
+              "secondary-container": "#fdd34d",
+              "on-background": "#2c2f2e",
+              "error-dim": "#b92902",
+              "outline": "#747776",
+              "on-tertiary-container": "#00344d",
+              "primary-fixed-dim": "#5bf083",
+              "tertiary": "#00628c",
+              "surface-container": "#e6e9e7",
+              "on-error": "#ffefec",
+              "primary-container": "#6bff8f",
+              "surface": "#f5f7f5",
+              "surface-container-low": "#eff1ef",
+              "secondary-fixed": "#fdd34d",
+              "on-primary": "#ceffd0",
+              "surface-tint": "#006a2d",
+              "on-surface": "#2c2f2e",
+              "surface-dim": "#d1d5d3",
+              "surface-container-highest": "#d9dedb",
+              "on-tertiary-fixed": "#001a29"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-ambient-pulse {
+            background: radial-gradient(circle at 50% 50%, #40bbff44 0%, transparent 70%);
+            filter: blur(80px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body min-h-screen flex flex-col relative overflow-hidden">
+<!-- Ambient Pulse Background -->
+<div class="fixed -top-24 -right-24 w-96 h-96 bg-ambient-pulse z-0 pointer-events-none opacity-50"></div>
+<div class="fixed bottom-0 -left-24 w-96 h-96 bg-ambient-pulse z-0 pointer-events-none opacity-30"></div>
+<!-- TopAppBar -->
+<header class="bg-surface/80 dark:bg-slate-900/80 backdrop-blur-xl fixed top-0 w-full z-50">
+<div class="flex items-center justify-between px-6 h-16 w-full max-w-2xl mx-auto">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container bg-surface-container-high flex items-center justify-center">
+<img alt="Serene Guide" class="w-full h-full object-cover" data-alt="Soft ethereal portrait of a friendly AI guide" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXo1TZXa3Xje0xYH-8XxjFWfW-0MTpDMkFRCcMeoZT_L_Ml7l0kdn6cRLpANaTGcCl6Qn2hwHnPg0UpGaZE9pqpqicNziNBwl-v5ydU51IwBDIL74QGd0Uc3hiwui0gcxhKrim9nnlVqL-KhDNGyfY-8iMzWcxY6lh-8QQJ6xIgXDTJw1rIzqxhJ3xEkBO8qzb12vi7Ugvr2YCkDygnFugxJLJVvgjFmJyTrv18E1LXcB6p-epqs-PvN6ktKaG7PsZ_ffimobFIFs"/>
+</div>
+<div>
+<h1 class="font-plus-jakarta text-headline-sm font-bold tracking-tight text-primary">Serene Guide</h1>
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary-fixed animate-pulse"></span>
+<span class="text-label-sm text-on-surface-variant">Calming Presence</span>
+</div>
+</div>
+</div>
+<button class="material-symbols-outlined text-on-surface-variant hover:bg-surface-container-highest/50 p-2 rounded-full transition-colors active:scale-95">settings</button>
+</div>
+</header>
+<!-- Chat Canvas -->
+<main class="flex-1 mt-16 pb-32 pt-6 px-4 overflow-y-auto z-10 w-full max-w-2xl mx-auto space-y-8">
+<!-- Timestamp -->
+<div class="flex justify-center">
+<span class="bg-surface-container-low px-4 py-1 rounded-full text-label-md text-on-surface-variant">Today at 9:41 AM</span>
+</div>
+<!-- Agent Message -->
+<div class="flex flex-col items-start gap-2 max-w-[85%]">
+<div class="bg-surface-container-high p-5 rounded-[2rem_2rem_2rem_0.5rem] shadow-sm">
+<p class="text-body-lg text-on-surface leading-relaxed">
+                    Hello, friend. I can feel a bit of tension in your breathing today. Would you like to try a 2-minute grounding exercise together?
+                </p>
+</div>
+<span class="text-label-sm text-on-surface-variant ml-2">Serene Guide</span>
+</div>
+<!-- User Message -->
+<div class="flex flex-col items-end gap-2 self-end max-w-[85%]">
+<div class="bg-primary-container p-5 rounded-[2rem_2rem_0.5rem_2rem] shadow-sm">
+<p class="text-body-lg text-on-primary-container leading-relaxed">
+                    Yes, please. I've had a very hectic morning and my mind is racing.
+                </p>
+</div>
+<span class="text-label-sm text-on-surface-variant mr-2">You</span>
+</div>
+<!-- Interaction Chips (Blobs) -->
+<div class="flex flex-wrap gap-3 pt-4">
+<button class="px-6 py-3 bg-secondary-container text-on-secondary-container rounded-full font-semibold text-label-lg shadow-xl shadow-secondary/5 hover:scale-105 active:scale-95 transition-all">
+                Deep Breathing
+            </button>
+<button class="px-6 py-3 bg-tertiary-container text-on-tertiary-container rounded-full font-semibold text-label-lg shadow-xl shadow-tertiary/5 hover:scale-105 active:scale-95 transition-all">
+                Body Scan
+            </button>
+<button class="px-6 py-3 bg-surface-container-highest text-on-surface rounded-full font-semibold text-label-lg hover:scale-105 active:scale-95 transition-all">
+                Just Chat
+            </button>
+</div>
+<!-- Agent Response with Glassmorphism Card -->
+<div class="flex flex-col items-start gap-2 max-w-[85%]">
+<div class="bg-surface-container-high/60 backdrop-blur-md p-6 rounded-[2rem_2rem_2rem_0.5rem] border border-outline-variant/15">
+<p class="text-body-lg text-on-surface leading-relaxed mb-4">
+                    Wonderful choice. Let's start by focusing on your center. Imagine a warm, glowing light at your heart...
+                </p>
+<!-- Bento style mini-activity -->
+<div class="grid grid-cols-2 gap-3">
+<div class="bg-surface-container-lowest p-3 rounded-xl flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">timer</span>
+<span class="text-label-md font-bold">2 Mins</span>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-xl flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">eco</span>
+<span class="text-label-md font-bold">Calming</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Input Field -->
+<div class="fixed bottom-0 left-0 w-full px-4 pb-8 z-50">
+<div class="max-w-2xl mx-auto relative group">
+<div class="absolute -inset-1 bg-gradient-to-r from-primary/20 to-tertiary/20 rounded-full blur opacity-25 group-focus-within:opacity-50 transition-opacity"></div>
+<div class="relative flex items-center bg-surface-container-lowest shadow-2xl shadow-primary/10 rounded-full px-2 py-2 border border-outline-variant/10">
+<button class="p-3 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">add_circle</span>
+</button>
+<input class="flex-1 bg-transparent border-none focus:ring-0 text-body-lg px-2 placeholder:text-on-surface-variant/60" placeholder="Share what's on your mind..." type="text"/>
+<button class="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-tr from-primary to-primary-dim text-on-primary shadow-lg active:scale-90 transition-all duration-150">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">send</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Background Decoration (The Luminous Garden) -->
+<div class="fixed top-1/2 right-[-10%] w-[400px] h-[400px] bg-primary-container/20 rounded-full blur-[120px] pointer-events-none z-0"></div>
+<div class="fixed top-1/4 left-[-5%] w-[300px] h-[300px] bg-tertiary-container/10 rounded-full blur-[100px] pointer-events-none z-0"></div>
+</body></html>

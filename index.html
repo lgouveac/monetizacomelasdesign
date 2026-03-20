@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monetiza com Elas Design | Apresentação da Nova Identidade Visual</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f5f7f5;
+      --surface: rgba(255, 255, 255, 0.78);
+      --surface-strong: #ffffff;
+      --text: #24312a;
+      --muted: #5f6f66;
+      --primary: #006a2d;
+      --primary-soft: #6bff8f;
+      --secondary: #fdd34d;
+      --tertiary: #40bbff;
+      --line: rgba(36, 49, 42, 0.08);
+      --shadow: 0 30px 80px rgba(0, 64, 29, 0.10);
+      --radius-xl: 36px;
+      --radius-lg: 26px;
+      --radius-md: 18px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Plus Jakarta Sans", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top right, rgba(64, 187, 255, 0.18), transparent 28%),
+        radial-gradient(circle at left center, rgba(107, 255, 143, 0.18), transparent 24%),
+        linear-gradient(180deg, #fbfcfb 0%, var(--bg) 100%);
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .page {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+      padding: 28px 0 60px;
+    }
+
+    .hero,
+    .section,
+    .footer-card {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      background: var(--surface);
+      backdrop-filter: blur(18px);
+      box-shadow: var(--shadow);
+    }
+
+    .hero {
+      padding: 28px;
+      min-height: 540px;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(253, 211, 77, 0.32);
+      color: #6a5400;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    h1 {
+      margin: 22px 0 16px;
+      font-size: clamp(40px, 7vw, 74px);
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+    }
+
+    .accent {
+      color: var(--primary);
+      font-style: italic;
+    }
+
+    .lead {
+      max-width: 600px;
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+    .hero-notes {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .mini-card {
+      padding: 18px;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.86);
+      border: 1px solid rgba(36, 49, 42, 0.06);
+    }
+
+    .mini-card strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    .mini-card span {
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--muted);
+    }
+
+    .hero-visual {
+      position: relative;
+      padding: 22px 22px 0;
+      border-radius: calc(var(--radius-xl) - 10px);
+      background: linear-gradient(180deg, rgba(107, 255, 143, 0.18), rgba(255, 255, 255, 0.82));
+    }
+
+    .hero-visual::before,
+    .section::before,
+    .footer-card::before {
+      content: "";
+      position: absolute;
+      inset: auto auto -80px -40px;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: rgba(64, 187, 255, 0.18);
+      filter: blur(40px);
+      pointer-events: none;
+    }
+
+    .hero-visual::after {
+      content: "";
+      position: absolute;
+      top: -30px;
+      right: -10px;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: rgba(107, 255, 143, 0.28);
+      filter: blur(32px);
+    }
+
+    .hero-visual img {
+      border-radius: 26px 26px 0 0;
+      box-shadow: 0 18px 36px rgba(0, 64, 29, 0.12);
+      position: relative;
+      z-index: 1;
+    }
+
+    .section {
+      margin-top: 24px;
+      padding: 28px;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: end;
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      margin: 0 0 8px;
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1;
+      letter-spacing: -0.03em;
+    }
+
+    .section-header p,
+    .section > p {
+      margin: 0;
+      max-width: 700px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .pillar {
+      padding: 22px;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.90);
+    }
+
+    .pillar b {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      margin-bottom: 16px;
+      border-radius: 14px;
+      color: var(--primary);
+      background: rgba(107, 255, 143, 0.24);
+    }
+
+    .pillar h3,
+    .application-card h3 {
+      margin: 0 0 10px;
+      font-size: 20px;
+    }
+
+    .pillar p,
+    .application-card p,
+    .tone-card p,
+    .summary-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .palette-grid,
+    .applications,
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .swatch {
+      min-height: 170px;
+      padding: 20px;
+      border-radius: 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
+    }
+
+    .swatch strong,
+    .tone-card strong,
+    .summary-card strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    .swatch span,
+    .tone-card span,
+    .summary-card span {
+      display: block;
+      font-size: 14px;
+      line-height: 1.5;
+      opacity: 0.92;
+    }
+
+    .tones {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .tone-card,
+    .summary-card,
+    .application-card {
+      padding: 22px;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    .type-scale {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 16px;
+      align-items: stretch;
+    }
+
+    .type-card {
+      padding: 28px;
+      border-radius: 28px;
+      background: linear-gradient(135deg, rgba(107, 255, 143, 0.24), rgba(64, 187, 255, 0.18));
+    }
+
+    .type-display {
+      margin: 0 0 18px;
+      font-size: clamp(42px, 5vw, 70px);
+      line-height: 0.95;
+      letter-spacing: -0.05em;
+    }
+
+    .type-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .type-list div {
+      padding: 18px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.86);
+    }
+
+    .application-card img {
+      margin-top: 18px;
+      border-radius: 22px;
+      box-shadow: 0 18px 30px rgba(0, 64, 29, 0.10);
+    }
+
+    .footer-card {
+      margin-top: 24px;
+      padding: 30px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .footer-card h2 {
+      margin-bottom: 12px;
+    }
+
+    .signature {
+      padding: 14px 20px;
+      border-radius: 999px;
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--primary), #139e4e);
+      box-shadow: 0 18px 30px rgba(0, 106, 45, 0.22);
+    }
+
+    @media (max-width: 980px) {
+      .hero,
+      .type-scale,
+      .tones,
+      .footer-card {
+        grid-template-columns: 1fr;
+      }
+
+      .pillars,
+      .palette-grid,
+      .applications,
+      .summary-grid,
+      .hero-notes {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .page {
+        width: min(var(--max), calc(100% - 24px));
+      }
+
+      .hero,
+      .section,
+      .footer-card {
+        padding: 20px;
+      }
+
+      .pillars,
+      .palette-grid,
+      .applications,
+      .summary-grid,
+      .hero-notes {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 46px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div>
+        <span class="eyebrow">Nova identidade visual proposta</span>
+        <h1>Monetiza com Elas como um <span class="accent">ecossistema acolhedor</span>, confiante e memorável.</h1>
+        <p class="lead">
+          Esta proposta traduz a marca em uma experiência visual mais premium, leve e humana. A direção criativa combina sofisticação editorial, atmosfera de cuidado e uma presença digital que foge do visual genérico de plataformas tradicionais.
+        </p>
+        <div class="hero-notes">
+          <article class="mini-card">
+            <strong>Posicionamento</strong>
+            <span>Mais autoridade sem perder proximidade. A marca passa a parecer segura, atual e intencional.</span>
+          </article>
+          <article class="mini-card">
+            <strong>Sensação</strong>
+            <span>Ambiente suave, vivo e respirável, com camadas orgânicas em vez de blocos rígidos.</span>
+          </article>
+          <article class="mini-card">
+            <strong>Diferenciação</strong>
+            <span>Uma estética própria, feminina e madura, evitando a aparência “template”.</span>
+          </article>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img src="stitch/sanctuary_home_page/screen.png" alt="Tela principal da proposta visual">
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <h2>Conceito criativo</h2>
+          <p>A base da proposta é transformar a experiência da marca em um espaço digital que acolhe, orienta e inspira ação. Em vez de uma interface fria, criamos uma presença com ritmo, respiro e personalidade.</p>
+        </div>
+      </div>
+      <div class="pillars">
+        <article class="pillar">
+          <b>01</b>
+          <h3>Acolhimento premium</h3>
+          <p>Clareza visual com sensação de cuidado, combinando suavidade com acabamento sofisticado.</p>
+        </article>
+        <article class="pillar">
+          <b>02</b>
+          <h3>Formas orgânicas</h3>
+          <p>Bordas generosas, volumes suaves e assimetria controlada para deixar a marca mais viva.</p>
+        </article>
+        <article class="pillar">
+          <b>03</b>
+          <h3>Leitura editorial</h3>
+          <p>Títulos fortes e bem escalados ajudam a marca a parecer mais autoral e menos utilitária.</p>
+        </article>
+        <article class="pillar">
+          <b>04</b>
+          <h3>Leveza funcional</h3>
+          <p>A interface continua prática, mas agora com uma camada emocional que fortalece percepção de valor.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <h2>Paleta e atmosfera</h2>
+          <p>A paleta foi construída para equilibrar frescor, confiança e calor humano. O verde lidera a marca, o amarelo adiciona energia e o azul cria sensação de fluidez e clareza.</p>
+        </div>
+      </div>
+      <div class="palette-grid">
+        <article class="swatch" style="background: linear-gradient(180deg, #6bff8f, #006a2d); color: #f2fff3;">
+          <strong>Verde assinatura</strong>
+          <span>`#006a2d` e `#6bff8f`</span>
+          <span>Transmite evolução, segurança e ação com suavidade.</span>
+        </article>
+        <article class="swatch" style="background: linear-gradient(180deg, #fdd34d, #c69c12); color: #433400;">
+          <strong>Amarelo de energia</strong>
+          <span>`#fdd34d`</span>
+          <span>Cria pontos de atenção e reforça acolhimento sem agressividade.</span>
+        </article>
+        <article class="swatch" style="background: linear-gradient(180deg, #40bbff, #00628c); color: #eef8ff;">
+          <strong>Azul de fluidez</strong>
+          <span>`#40bbff` e `#00628c`</span>
+          <span>Equilibra a composição e adiciona frescor contemporâneo.</span>
+        </article>
+      </div>
+      <div class="tones">
+        <article class="tone-card">
+          <strong>Fundos claros com profundidade</strong>
+          <p>Em vez de divisórias duras, a separação entre blocos acontece por mudança tonal. Isso faz a interface parecer mais limpa, sofisticada e natural.</p>
+        </article>
+        <article class="tone-card">
+          <strong>Brilho controlado</strong>
+          <p>Os gradientes e brilhos suaves trazem identidade sem poluição visual, valorizando o conteúdo principal.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <h2>Tipografia e linguagem</h2>
+          <p>A tipografia escolhida, Plus Jakarta Sans, entrega um equilíbrio muito interessante: moderna, amigável e segura. Ela sustenta um posicionamento mais profissional sem perder a delicadeza da marca.</p>
+        </div>
+      </div>
+      <div class="type-scale">
+        <article class="type-card">
+          <p class="type-display">Uma voz visual clara, feminina e confiante.</p>
+          <p class="lead" style="font-size: 16px; max-width: none;">
+            O uso de títulos maiores, com contraste forte e espaçamento bem resolvido, cria percepção de marca mais forte e melhora a memorização.
+          </p>
+        </article>
+        <div class="type-list">
+          <div>
+            <strong>Headline</strong>
+            <span>Impacto editorial para apresentar proposta, direção e diferenciação.</span>
+          </div>
+          <div>
+            <strong>Texto corrido</strong>
+            <span>Leitura confortável, leve e organizada para manter proximidade com o público.</span>
+          </div>
+          <div>
+            <strong>Microcopy</strong>
+            <span>Labels e apoios discretos, sem competir com a mensagem principal.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <h2>Aplicação da identidade</h2>
+          <p>A força da proposta aparece quando a identidade se adapta com consistência em diferentes contextos. Abaixo, a mesma linguagem visual aplicada em navegação, gestão de conteúdo e interação.</p>
+        </div>
+      </div>
+      <div class="applications">
+        <article class="application-card">
+          <h3>Landing principal</h3>
+          <p>Primeiro contato mais aspiracional, com apelo emocional forte e estrutura de conversão mais elegante.</p>
+          <img src="stitch/sanctuary_home_page/screen.png" alt="Aplicação da identidade na landing page">
+        </article>
+        <article class="application-card">
+          <h3>Área interna</h3>
+          <p>Dashboard com leitura leve, hierarquia clara e sensação de marca viva mesmo em conteúdo funcional.</p>
+          <img src="stitch/serene_dashboard_desktop_playful/screen.png" alt="Aplicação da identidade no dashboard">
+        </article>
+        <article class="application-card">
+          <h3>Experiência conversacional</h3>
+          <p>O visual mantém acolhimento e confiança também em fluxos de troca, suporte e orientação.</p>
+          <img src="stitch/serene_chat_desktop_playful/screen.png" alt="Aplicação da identidade em interface de chat">
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <h2>Resumo estratégico</h2>
+          <p>Em termos de percepção, esta identidade move a marca para um território mais autoral, desejável e coerente com uma experiência premium.</p>
+        </div>
+      </div>
+      <div class="summary-grid">
+        <article class="summary-card">
+          <strong>Mais valor percebido</strong>
+          <p>A nova direção visual aumenta a sensação de qualidade e cuidado em cada ponto de contato.</p>
+        </article>
+        <article class="summary-card">
+          <strong>Mais diferenciação</strong>
+          <p>A estética foge do padrão previsível e cria uma assinatura visual própria para a marca.</p>
+        </article>
+        <article class="summary-card">
+          <strong>Mais consistência</strong>
+          <p>O sistema visual funciona tanto em páginas institucionais quanto em áreas internas e produtos digitais.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="footer-card">
+      <div>
+        <h2>Recomendação</h2>
+        <p>Seguir com esta identidade como base oficial da marca e evoluir a partir dela os próximos pontos de contato: site, páginas de venda, área de membros, materiais institucionais e campanhas.</p>
+      </div>
+      <a class="signature" href="stitch/luminous_sanctuary/DESIGN.md">Abrir racional criativo</a>
+    </section>
+  </main>
+</body>
+</html>

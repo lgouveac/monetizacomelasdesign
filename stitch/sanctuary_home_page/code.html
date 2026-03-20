@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sanctuary | Your Digital Garden</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-variant": "#d9dedb",
+              "tertiary-fixed": "#40bbff",
+              "on-secondary-fixed-variant": "#675200",
+              "on-surface-variant": "#595c5b",
+              "surface-container-high": "#e0e3e1",
+              "on-background": "#2c2f2e",
+              "secondary-container": "#fdd34d",
+              "error-dim": "#b92902",
+              "on-tertiary-container": "#00344d",
+              "outline": "#747776",
+              "primary-fixed-dim": "#5bf083",
+              "surface-container": "#e6e9e7",
+              "tertiary": "#00628c",
+              "on-error": "#ffefec",
+              "surface": "#f5f7f5",
+              "primary-container": "#6bff8f",
+              "secondary-fixed": "#fdd34d",
+              "surface-container-low": "#eff1ef",
+              "on-primary": "#ceffd0",
+              "surface-tint": "#006a2d",
+              "on-surface": "#2c2f2e",
+              "surface-dim": "#d1d5d3",
+              "on-tertiary-fixed": "#001a29",
+              "surface-container-highest": "#d9dedb",
+              "tertiary-dim": "#00557b",
+              "primary": "#006a2d",
+              "error-container": "#f95630",
+              "error": "#b02500",
+              "tertiary-container": "#40bbff",
+              "on-tertiary": "#e9f4ff",
+              "tertiary-fixed-dim": "#25adf1",
+              "secondary-fixed-dim": "#eec540",
+              "on-secondary-fixed": "#463600",
+              "surface-container-lowest": "#ffffff",
+              "primary-fixed": "#6bff8f",
+              "on-secondary-container": "#5c4900",
+              "inverse-primary": "#6bff8f",
+              "outline-variant": "#abaeac",
+              "surface-bright": "#f5f7f5",
+              "secondary": "#705900",
+              "on-primary-container": "#005f28",
+              "on-tertiary-fixed-variant": "#003d5a",
+              "inverse-surface": "#0b0f0e",
+              "on-error-container": "#520c00",
+              "on-secondary": "#fff2d4",
+              "secondary-dim": "#624d00",
+              "primary-dim": "#005d26",
+              "on-primary-fixed-variant": "#006a2d",
+              "background": "#f5f7f5",
+              "on-primary-fixed": "#004a1d",
+              "inverse-on-surface": "#9b9d9c"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .ambient-pulse {
+            position: fixed;
+            top: -10%;
+            right: -10%;
+            width: 60vw;
+            height: 60vw;
+            background: radial-gradient(circle, rgba(64, 187, 255, 0.15) 0%, rgba(245, 247, 245, 0) 70%);
+            filter: blur(100px);
+            z-index: -1;
+        }
+        .ambient-pulse-2 {
+            position: fixed;
+            bottom: -10%;
+            left: -10%;
+            width: 50vw;
+            height: 50vw;
+            background: radial-gradient(circle, rgba(107, 255, 143, 0.15) 0%, rgba(245, 247, 245, 0) 70%);
+            filter: blur(100px);
+            z-index: -1;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<div class="ambient-pulse"></div>
+<div class="ambient-pulse-2"></div>
+<!-- TopNavBar -->
+<nav class="w-full sticky top-0 z-50 bg-emerald-50/80 dark:bg-zinc-950/80 backdrop-blur-xl shadow-sm shadow-emerald-900/5">
+<div class="flex justify-between items-center px-6 py-4 w-full max-w-screen-2xl mx-auto">
+<div class="text-2xl font-bold tracking-tight text-emerald-900 dark:text-emerald-50">Sanctuary</div>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center gap-8 font-plus-jakarta-sans text-sm font-medium">
+<a class="text-emerald-900 dark:text-emerald-400 font-bold border-b-2 border-emerald-600 active:scale-95 duration-200" href="#">Home</a>
+<a class="text-emerald-800/60 dark:text-zinc-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors active:scale-95 duration-200" href="#">Meditation</a>
+<a class="text-emerald-800/60 dark:text-zinc-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors active:scale-95 duration-200" href="#">Sleep</a>
+<a class="text-emerald-800/60 dark:text-zinc-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors active:scale-95 duration-200" href="#">Journaling</a>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:block relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-sm" data-icon="search">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-low rounded-full border-none focus:ring-2 focus:ring-primary/20 w-48 text-sm" placeholder="Search peace..." type="text"/>
+</div>
+<span class="material-symbols-outlined text-emerald-900 dark:text-emerald-400 cursor-pointer p-2 hover:bg-emerald-100 dark:hover:bg-zinc-800 rounded-full transition-all" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined text-emerald-900 dark:text-emerald-400 cursor-pointer p-2 hover:bg-emerald-100 dark:hover:bg-zinc-800 rounded-full transition-all" data-icon="settings">settings</span>
+<div class="w-10 h-10 rounded-full bg-primary-container overflow-hidden">
+<img alt="User profile avatar" class="w-full h-full object-cover" data-alt="Close up portrait of a smiling woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArFnRFiRuEF2Y4VeL-nex8ryHjSJQuYVOtS3G0FrsTIYAChtP0RT6pqBnjomiciGyHJOU6KR659VOxUQCkruEFyboOnXBTaGKH93-8rc0EwWR1jF2Dh902XiuWweJbdMpul2AJ5nixP041xodAxBCK-goM--txKM9OyP3FHwlLz-s_yHvZQgg4t4dBk7wvZOZypGA_NKHUH1it6siLUqriaje6-zJx1CDW9Z8UP0s30I_geLMnh7SeU3BC3y6M_g9FVKBYyJJu3oI"/>
+</div>
+</div>
+</div>
+</nav>
+<main class="max-w-screen-2xl mx-auto px-6 pt-12 md:pt-20">
+<!-- Hero Section -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-32">
+<div class="space-y-8 order-2 lg:order-1">
+<div class="inline-flex items-center gap-2 px-4 py-2 bg-secondary-container/30 text-on-secondary-container rounded-full text-sm font-semibold">
+<span class="material-symbols-outlined text-sm" data-icon="sparkles">colors_spark</span>
+                    Welcome to your calm
+                </div>
+<h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-on-background leading-[1.1]">
+                    Your Digital <span class="text-primary italic">Sanctuary</span> for Peace of Mind
+                </h1>
+<p class="text-body-lg text-on-surface-variant max-w-lg leading-relaxed">
+                    A living space designed to help you breathe, focus, and thrive. Reconnect with your inner peace through curated mindfulness experiences.
+                </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="px-8 py-4 bg-gradient-to-r from-primary to-primary-dim text-on-primary rounded-full font-bold text-lg shadow-xl shadow-primary/20 hover:scale-105 active:scale-95 transition-all">
+                        Start Your Journey
+                    </button>
+<button class="px-8 py-4 bg-surface-container-highest text-on-surface rounded-full font-bold text-lg hover:bg-surface-container-high transition-all">
+                        Explore Sessions
+                    </button>
+</div>
+</div>
+<div class="relative order-1 lg:order-2 flex justify-center">
+<div class="absolute -z-10 w-full h-full bg-primary-container/20 blur-3xl rounded-full scale-110"></div>
+<div class="relative w-full aspect-square max-w-lg">
+<img alt="Abstract 3D Shapes" class="w-full h-full object-cover rounded-xl shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-700" data-alt="Abstract colorful 3D shapes floating in a soft light space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDR0Q2hAXQHHPpOuidVcFrct_AR-wTDHo8gbRPw8HFgZ_f8PHkfDprJKGZ_b1mNQ9LvvugAVxpKQWbikUXLcHDs54zv6ZELPuqdQk2kHnamO3Eum1v1O93U_YdT9-INGA0TcTPaODw2FzIfP39ZulWZQDAf803TTohhTVlTJXba1hidoiCeJtcqs50rGuGKlm1g8-YDbg5xgge-1mX4gq2uvxwGc7KyqCl_o1Ts87nJYoplmMblYxzCUXtLQwIDyJbAzgZFOhoCo00"/>
+<!-- Floating Badge -->
+<div class="absolute -bottom-6 -left-6 bg-surface-container-lowest p-6 rounded-lg shadow-2xl flex items-center gap-4 max-w-xs">
+<div class="w-12 h-12 bg-tertiary-container rounded-full flex items-center justify-center text-on-tertiary-container">
+<span class="material-symbols-outlined" data-icon="self_improvement">self_improvement</span>
+</div>
+<div>
+<div class="text-sm font-bold">15 Min Mindfulness</div>
+<div class="text-xs text-on-surface-variant">4.2k people breathing with you</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid Features -->
+<section class="mb-32">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div class="max-w-2xl">
+<h2 class="text-4xl font-extrabold mb-4 tracking-tight">Crafted for your well-being</h2>
+<p class="text-on-surface-variant">Explore our curated pathways designed to support every aspect of your emotional landscape.</p>
+</div>
+<div class="flex gap-2">
+<button class="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<button class="w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center hover:opacity-90 transition-all">
+<span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Mindfulness Large Card -->
+<div class="md:col-span-2 bg-primary-container/40 p-8 rounded-xl flex flex-col justify-between group overflow-hidden relative min-h-[400px]">
+<div class="relative z-10">
+<div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center text-on-primary mb-6">
+<span class="material-symbols-outlined text-3xl" data-icon="psychology">psychology</span>
+</div>
+<h3 class="text-3xl font-bold mb-4">Mindfulness</h3>
+<p class="text-on-primary-container max-w-sm leading-relaxed">
+                            Guided sessions that anchor you in the present moment. From body scans to breathwork, find your center anywhere.
+                        </p>
+</div>
+<div class="relative z-10 mt-8">
+<button class="text-primary font-bold flex items-center gap-2 group-hover:gap-4 transition-all">
+                            View 40+ Sessions <span class="material-symbols-outlined" data-icon="trending_flat">trending_flat</span>
+</button>
+</div>
+<!-- Decorative Element -->
+<div class="absolute -right-12 -bottom-12 w-64 h-64 bg-primary/10 rounded-full blur-2xl group-hover:scale-125 transition-transform duration-700"></div>
+<img alt="Zen Stone Stack" class="absolute right-8 top-1/2 -translate-y-1/2 w-48 h-72 object-cover rounded-full shadow-xl opacity-80 group-hover:scale-105 transition-transform duration-700" data-alt="Vertical stack of balanced zen stones near water" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDW6mPVTtcs-7tXpXi0rcg38m2Mch7NvKR0PEvW3Nm5EFqPDaSIGHVh2PseRIQXTOhgCtvRbG7aL3DsTeArKNP7UVo5RPPaLXQJFMBLPWgg20lW7jn08hs7XdsZNOvToXaAu_g3p1U_L82ZyCxG6bWowe4uFWccdhDuT7VUzkZK092soqgA_Y3iRZmH94Tl4g7-nd9_gjGUQD6FJAHnh8GLn04RuD-0F9QG8rCoY63WUHjql1tHQWWAX83pTQSQYhMRGxTf53X14Wk"/>
+</div>
+<!-- Deep Sleep -->
+<div class="bg-surface-container-low p-8 rounded-xl flex flex-col justify-between hover:bg-surface-container-high transition-all cursor-pointer border border-transparent hover:border-outline-variant/10">
+<div>
+<div class="w-14 h-14 bg-tertiary-container rounded-full flex items-center justify-center text-on-tertiary-container mb-6">
+<span class="material-symbols-outlined text-3xl" data-icon="bedtime">bedtime</span>
+</div>
+<h3 class="text-2xl font-bold mb-3">Deep Sleep</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                            Enter the dreamscape with immersive soundscapes and narrated sleep stories.
+                        </p>
+</div>
+<div class="mt-8 flex -space-x-3">
+<img class="w-10 h-10 rounded-full border-2 border-surface" data-alt="Avatar of a woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfqc4nha7NYkReVmbZVQGo_NhiMZvhKJi_8ZXxFKQHoskLs4-XGBUizujkiwrRNib-I3xoCiL-zXaJK6Jc5l_lRvlcpIcSMiqEp2jF_RJIYWQFghWGRoHqPebtTvw3lGYPKfqiwcsgJeFZ1DkgTAatXKwyVhP-cAy-H4K_UEpRqrzkTpY9BPTa9LLcIi7xv2Syg93ChVfEqgW2VCZLasmsame2CbCv-gasob7onvJC_dFTbEFxQj-4Vpbq3eR40T8WR8Z6goXRpqc"/>
+<img class="w-10 h-10 rounded-full border-2 border-surface" data-alt="Avatar of a man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXVWzN5d8eIzWkdG9L9tC4zzIm5wmwEee2B-DtJuNy8AoWCayMhNabYHLaP4iS-XSOAPrAeXAw9APqGiYVPePlNpy3oNTpUwd9WFhZ9y3fD1OvyZlz7sphtTDvNtVE8ZCNvIUZota_WnDLvcnA3nLQ-FCWi8tEeSgUrRN37Wgl8IuGzbOC_RbDW7r829lTJJrmbr5TYUyOiL4HcWeSp3s6RoEtiqx5esvaaupa0x7_kMBLnTdP0Mj8E38DXmoWE9CAnVSexV6rFpk"/>
+<div class="w-10 h-10 rounded-full bg-tertiary text-[10px] flex items-center justify-center text-white border-2 border-surface font-bold">+12k</div>
+</div>
+</div>
+<!-- Emotional Resilience -->
+<div class="bg-secondary-container/40 p-8 rounded-xl flex flex-col justify-between group hover:shadow-xl hover:shadow-secondary/5 transition-all cursor-pointer">
+<div>
+<div class="w-14 h-14 bg-secondary rounded-full flex items-center justify-center text-on-secondary mb-6">
+<span class="material-symbols-outlined text-3xl" data-icon="favorite">favorite</span>
+</div>
+<h3 class="text-2xl font-bold mb-3">Emotional Resilience</h3>
+<p class="text-on-secondary-container leading-relaxed">
+                            Tools to navigate stress and build a stronger foundation for mental health.
+                        </p>
+</div>
+<div class="mt-8">
+<div class="h-1.5 w-full bg-secondary/10 rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-2/3 rounded-full"></div>
+</div>
+<div class="text-xs mt-2 font-medium text-on-secondary-container">Popular this week</div>
+</div>
+</div>
+<!-- Journaling -->
+<div class="md:col-span-2 bg-surface-container-lowest p-8 rounded-xl flex flex-col md:flex-row gap-8 items-center border border-outline-variant/10 shadow-sm">
+<div class="flex-1">
+<h3 class="text-2xl font-bold mb-4">Mindful Journaling</h3>
+<p class="text-on-surface-variant mb-6 leading-relaxed">
+                            Release your thoughts in a safe space. Our AI-guided prompts help you uncover patterns in your emotional journey.
+                        </p>
+<button class="px-6 py-3 bg-on-background text-surface rounded-full text-sm font-bold flex items-center gap-2">
+                            Open Journal <span class="material-symbols-outlined text-sm" data-icon="edit_note">edit_note</span>
+</button>
+</div>
+<div class="w-full md:w-64 h-48 bg-surface-container-low rounded-lg p-4 flex flex-col gap-3">
+<div class="h-3 bg-surface-container-highest rounded-full w-3/4"></div>
+<div class="h-3 bg-surface-container-highest rounded-full w-full opacity-60"></div>
+<div class="h-3 bg-surface-container-highest rounded-full w-1/2 opacity-30"></div>
+<div class="mt-auto flex justify-between">
+<div class="w-8 h-8 rounded-full bg-primary-container"></div>
+<div class="w-8 h-8 rounded-full bg-secondary-container"></div>
+<div class="w-8 h-8 rounded-full bg-tertiary-container"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Signature Ambient Section -->
+<section class="mb-32 py-20 bg-surface-container-low rounded-[4rem] px-8 md:px-20 text-center overflow-hidden relative">
+<div class="absolute top-0 left-0 w-full h-full opacity-30">
+<div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary blur-[120px] rounded-full"></div>
+<div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-tertiary blur-[120px] rounded-full"></div>
+</div>
+<div class="relative z-10 max-w-3xl mx-auto">
+<h2 class="text-4xl md:text-5xl font-extrabold mb-8 tracking-tight">Ready to find your peace?</h2>
+<p class="text-on-surface-variant text-xl mb-12 leading-relaxed">
+                    Join over 2 million souls who have made Sanctuary their daily home for mental clarity and emotional strength.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="px-10 py-5 bg-primary text-on-primary rounded-full font-bold text-xl shadow-2xl shadow-primary/30 hover:scale-105 active:scale-95 transition-all">
+                        Download Now
+                    </button>
+<button class="px-10 py-5 border-2 border-outline-variant/30 text-on-surface rounded-full font-bold text-xl hover:bg-surface transition-all">
+                        Watch Demo
+                    </button>
+</div>
+<div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+<div class="font-black text-xl">Wellness Daily</div>
+<div class="font-black text-xl">Mindful.org</div>
+<div class="font-black text-xl">Vogue</div>
+<div class="font-black text-xl">TechTimes</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest/30 pt-20 pb-12 px-6">
+<div class="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+<div class="col-span-1 md:col-span-1">
+<div class="text-2xl font-bold tracking-tight text-emerald-900 mb-6">Sanctuary</div>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">
+                    A Digital Sanctuary crafted with love for a calmer mind. Your journey to wellness starts with a single breath.
+                </p>
+<div class="flex gap-4">
+<div class="w-8 h-8 bg-surface-container rounded-full flex items-center justify-center hover:bg-primary-container transition-all cursor-pointer">
+<span class="material-symbols-outlined text-sm" data-icon="share">share</span>
+</div>
+<div class="w-8 h-8 bg-surface-container rounded-full flex items-center justify-center hover:bg-primary-container transition-all cursor-pointer">
+<span class="material-symbols-outlined text-sm" data-icon="language">language</span>
+</div>
+</div>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-emerald-900">Explore</h4>
+<ul class="space-y-4 text-sm text-on-surface-variant">
+<li class="hover:text-primary transition-colors cursor-pointer">Meditation</li>
+<li class="hover:text-primary transition-colors cursor-pointer">Sleep Stories</li>
+<li class="hover:text-primary transition-colors cursor-pointer">Soundscapes</li>
+<li class="hover:text-primary transition-colors cursor-pointer">Breathing</li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-emerald-900">Support</h4>
+<ul class="space-y-4 text-sm text-on-surface-variant">
+<li class="hover:text-primary transition-colors cursor-pointer">Help Center</li>
+<li class="hover:text-primary transition-colors cursor-pointer">Privacy Policy</li>
+<li class="hover:text-primary transition-colors cursor-pointer">Terms of Service</li>
+<li class="hover:text-primary transition-colors cursor-pointer">Accessibility</li>
+</ul>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl">
+<h4 class="font-bold mb-4 text-emerald-900">Stay Mindful</h4>
+<p class="text-xs text-on-surface-variant mb-4">Get weekly peace-of-mind tips and new session alerts.</p>
+<div class="flex gap-2">
+<input class="flex-1 bg-surface-container-lowest border-none rounded-full px-4 text-sm focus:ring-1 focus:ring-primary" placeholder="Email" type="email"/>
+<button class="w-10 h-10 bg-primary text-on-primary rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-sm" data-icon="send">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-screen-2xl mx-auto border-t border-outline-variant/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-on-surface-variant">
+<p>© 2024 Sanctuary App Inc. All rights reserved.</p>
+<div class="flex gap-6">
+<span class="hover:text-primary cursor-pointer">Cookie Settings</span>
+<span class="hover:text-primary cursor-pointer">Global Reach</span>
+</div>
+</div>
+</footer>
+<!-- Mobile Bottom Navigation -->
+<div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-emerald-50/90 backdrop-blur-xl px-6 py-4 flex justify-between items-center shadow-[0_-4px_24px_rgba(0,0,0,0.05)]">
+<div class="flex flex-col items-center gap-1 text-emerald-900">
+<span class="material-symbols-outlined" data-icon="dashboard" data-weight="fill">dashboard</span>
+<span class="text-[10px] font-bold">Dashboard</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-emerald-800/60">
+<span class="material-symbols-outlined" data-icon="self_improvement">self_improvement</span>
+<span class="text-[10px]">Meditation</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-emerald-800/60">
+<span class="material-symbols-outlined" data-icon="bedtime">bedtime</span>
+<span class="text-[10px]">Sleep</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-emerald-800/60">
+<span class="material-symbols-outlined" data-icon="edit_note">edit_note</span>
+<span class="text-[10px]">Journal</span>
+</div>
+</div>
+</body></html>
